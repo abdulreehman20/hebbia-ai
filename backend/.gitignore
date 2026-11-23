@@ -1,10 +1,70 @@
-# Python-generated files
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
 dist/
 wheels/
-*.egg-info
+*.egg
+*.egg-info/
+.eggs/
 
 # Virtual environments
-.venv
+.venv/
+venv/
+ENV/
+
+# Tooling caches / coverage
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# uv / packaging
+uv.toml.local
+
+# SEC corpus artifacts (do not push) — paths relative to backend/
+data/downloads/
+data/markdown/
+data/ingestion_cache/
+data/ingestion_report.json
+data/ingestion_report.json.tmp
+data/**/manifest.json.bak
+
+# Keep scripts + optional placeholder
+!data/*.py
+!data/.gitkeep
+
+# OS / editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / temp
+*.log
+logs/
+tmp/
+temp/
+.cache/
