@@ -5,17 +5,18 @@ from __future__ import annotations
 from functools import lru_cache
 from pathlib import Path
 
-from constants import (
+from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+from app.core.constants import (
     CHAT_MODEL,
     DEFAULT_PINECONE_INDEX_NAME,
     EMBEDDING_DIMENSIONS,
     EMBEDDING_MODEL,
     RERANKER_MODEL,
 )
-from pydantic import Field
-from pydantic_settings import BaseSettings, SettingsConfigDict
 
-BACKEND_ROOT = Path(__file__).resolve().parent
+BACKEND_ROOT = Path(__file__).resolve().parents[2]  # .../backend
 DATA_DIR = BACKEND_ROOT / "data"
 MARKDOWN_DIR = DATA_DIR / "markdown"
 MARKDOWN_MANIFEST = MARKDOWN_DIR / "manifest.json"
