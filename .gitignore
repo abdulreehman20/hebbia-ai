@@ -78,9 +78,9 @@ tmp/
 temp/
 .cache/
 
-# Local data / uploads (keep structure with .gitkeep if needed)
-backend/data/*
-!backend/data/.gitkeep
+# # Local data / uploads (keep structure with .gitkeep if needed)
+# backend/data/*
+# !backend/data/.gitkeep
 
 # Cursor / agent local state (optional local-only)
 .cursor/hooks/state/
